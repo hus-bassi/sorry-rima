@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>ريما سلطان ❤️</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<canvas id="bgCanvas"></canvas>
+
+<audio id="bgMusic" loop preload="none">
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+<button class="music-toggle" id="musicToggle" aria-label="تشغيل الموسيقى">
+  <span class="music-icon">🎵</span>
+</button>
+
+<!-- ============ SCENE 0 : INTRO ============ -->
+<section class="scene scene-intro" id="scene-intro">
+  <div class="intro-glow" id="introGlow"></div>
+  <div class="intro-heart" id="introHeart">
+    <svg viewBox="0 0 100 90" class="heart-svg">
+      <path d="M50 85 C 10 55, -5 25, 20 10 C 38 -2, 50 12, 50 20 C 50 12, 62 -2, 80 10 C 105 25, 90 55, 50 85 Z"/>
+    </svg>
+  </div>
+  <p class="intro-text" id="introText"></p>
+</section>
+
+<!-- ============ SCENE 1 : MAIN CARD ============ -->
+<section class="scene scene-main" id="scene-main">
+  <div class="petals-layer" id="petalsLayer"></div>
+
+  <div class="glass-card">
+    <div class="card-sparkle"></div>
+    <p class="card-eyebrow">🌹 يا ريما سلطان</p>
+    <h1 class="card-question" id="cardQuestion">ممكن تسامحيني؟</h1>
+
+    <div class="tears-row" id="tearsRow"></div>
+
+    <div class="buttons-row">
+      <button class="btn btn-no" id="btnNo">💔 لا</button>
+      <button class="btn btn-yes" id="btnYes">❤️ سامحتك</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FLASH / TRANSITION ============ -->
+<div class="flash-white" id="flashWhite"></div>
+<canvas id="burstCanvas"></canvas>
+
+<!-- ============ SCENE 2 : DOOR ============ -->
+<section class="scene scene-door" id="scene-door">
+  <div class="door-frame">
+    <div class="door-glow"></div>
+    <div class="door-leaf door-left" id="doorLeft">
+      <div class="door-ornament"></div>
+    </div>
+    <div class="door-leaf door-right" id="doorRight">
+      <div class="door-ornament"></div>
+    </div>
+    <div class="door-light" id="doorLight"></div>
+  </div>
+</section>
+
+<!-- ============ SCENE 3 : NEW WORLD ============ -->
+<section class="scene scene-world" id="scene-world">
+  <div class="sky"></div>
+  <div class="sun"></div>
+  <div class="lake"></div>
+  <div class="mountains"></div>
+  <div class="sakura-layer" id="sakuraLayer"></div>
+  <div class="fireflies" id="fireflies"></div>
+
+  <div class="character" id="character">
+    <div class="chibi">
+      <div class="chibi-hair-back"></div>
+      <div class="chibi-head">
+        <div class="chibi-blush l"></div>
+        <div class="chibi-blush r"></div>
+        <div class="chibi-eye l" id="eyeL"></div>
+        <div class="chibi-eye r" id="eyeR"></div>
+        <div class="chibi-smile"></div>
+      </div>
+      <div class="chibi-hair-front"></div>
+      <div class="chibi-body">
+        <div class="chibi-arm chibi-arm-left" id="armLeft"></div>
+        <div class="chibi-arm chibi-arm-right" id="armRight"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dialogue-box" id="dialogueBox">
+    <p class="dialogue-text" id="dialogueText"></p>
+  </div>
+
+  <button class="btn btn-hug" id="btnHug">❤️ حضن</button>
+</section>
+
+<!-- ============ SCENE 4 : ENDING ============ -->
+<section class="scene scene-end" id="scene-end">
+  <p class="end-thanks" id="endThanks">شكراً إنك سامحتيني ❤️</p>
+  <p class="end-title" id="endTitle">The End</p>
+  <p class="end-sub">حسين وريما سلطان</p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
